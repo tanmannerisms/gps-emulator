@@ -2,7 +2,7 @@ package Bodies;
 
 public class Earth extends Body{
     private static Earth earthInstance = null;
-    // Equatorial radius of the Earth in meters.
+    // Equatorial radius of the Earth in kilometers.
     private static final double radius = 6378.137d;
 
     private Earth() {
