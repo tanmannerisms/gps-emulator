@@ -7,10 +7,10 @@ public class Satellite extends Body{
         if (!validR(r)) {
             throw badRadius;
         } else {
-            this.r = r;
+            setR(r);
         }
-        this.theta = theta;
-        this.z = z;
+        setTheta(theta);
+        setZ(z);
     }
     public void setCoordinates(double r, double theta, double z) throws IllegalArgumentException{
         if (!validR(r)) {

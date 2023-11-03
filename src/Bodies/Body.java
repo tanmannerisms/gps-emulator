@@ -1,26 +1,26 @@
 package Bodies;
 
-public abstract class Body {
+protected abstract class Body {
     // Polar position coordinates
-    protected double r, theta, z;
+    private double r, theta, z;
 
-    public double getR() {
-        return r;
+    protected double getR() {
+        return this.r;
     }
-    public double getTheta() {
-        return theta;
+    protected double getTheta() {
+        return this.theta;
     }
-    public double getZ() {
-        return z;
+    protected double getZ() {
+        return this.z;
     }
 
-    public void setR(double r) {
+    protected void setR(double r) {
         this.r = r;
     }
-    public void setTheta(double theta) {
+    protected void setTheta(double theta) {
         this.theta = theta;
     }
-    public void setZ(double z) {
+    protected void setZ(double z) {
         this.z = z;
     }
 }

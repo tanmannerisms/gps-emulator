@@ -7,9 +7,9 @@ public class Earth extends Body{
 
     private Earth() {
         // Assuming that the earth is the center of the polar coordinate system.
-        this.r = 0;
-        this.theta = 0;
-        this.z = 0;
+        setR(0);
+        setTheta(0);
+        setZ(0);
     }
     public static synchronized Earth getInstance() {
         if (earthInstance == null) {
