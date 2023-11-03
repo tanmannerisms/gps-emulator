@@ -1,6 +1,6 @@
 package Bodies;
 
-protected abstract class Body {
+abstract class Body {
     // Polar position coordinates
     private double r, theta, z;
 
