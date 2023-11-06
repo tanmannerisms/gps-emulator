@@ -1,4 +1,4 @@
-package Bodies;
+package bodies;
 
 abstract class Body {
     // Polar position coordinates

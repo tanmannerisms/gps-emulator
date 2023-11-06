@@ -1,4 +1,4 @@
-package Bodies;
+package bodies;
 
 public class Satellite extends Body{
     private final IllegalArgumentException badRadius = new IllegalArgumentException(

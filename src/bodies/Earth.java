@@ -1,4 +1,4 @@
-package Bodies;
+package bodies;
 
 public class Earth extends Body{
     private static Earth earthInstance = null;
