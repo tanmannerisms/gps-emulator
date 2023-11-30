@@ -4,13 +4,13 @@ abstract class Body {
     // Polar position coordinates
     private double r, theta, z;
 
-    protected double getR() {
+    public double getR() {
         return this.r;
     }
-    protected double getTheta() {
+    public double getTheta() {
         return this.theta;
     }
-    protected double getZ() {
+    public double getZ() {
         return this.z;
     }
 
