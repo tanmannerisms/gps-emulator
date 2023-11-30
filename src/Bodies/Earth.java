@@ -3,12 +3,12 @@ package Bodies;
 public class Earth extends Body{
     private static Earth earthInstance = null;
     // Equatorial radius of the Earth in kilometers.
-    private static final double radius = 6378.137d;
+    private static final float radius = 6378.137f;
 
     private Earth() {
         // Assuming that the earth is the center of the polar coordinate system.
-        setR(0);
-        setTheta(0);
+        setX(0);
+        setY(0);
         setZ(0);
     }
     public static synchronized Earth getInstance() {

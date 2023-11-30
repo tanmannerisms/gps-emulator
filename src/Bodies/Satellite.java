@@ -3,22 +3,22 @@ package Bodies;
 public class Satellite extends Body{
     private final IllegalArgumentException badRadius = new IllegalArgumentException(
             "Distance number invalid. Distance must be greater than " + Earth.getRadius());
-    public Satellite(double r, double theta, double z) throws IllegalArgumentException{
-        if (inValidR(r)) {
+    public Satellite(double x, double y, double z) throws IllegalArgumentException{
+        if (inValidR(x)) {
             throw badRadius;
         } else {
-            setR(r);
+            setX(x);
         }
-        setTheta(theta);
+        setY(y);
         setZ(z);
     }
-    public void setCoordinates(double r, double theta, double z) throws IllegalArgumentException{
-        if (inValidR(r)) {
+    public void setCoordinates(double x, double y, double z) throws IllegalArgumentException{
+        if (inValidR(x)) {
             throw badRadius;
         } else {
-            setR(r);
+            setX(x);
         }
-        setTheta(theta);
+        setY(y);
         setZ(z);
     }
     private boolean inValidR(double r)  {
