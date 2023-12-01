@@ -1,6 +1,5 @@
-import Bodies.Earth;
-import Bodies.Satellite;
-import math.Trilateration;
+import bodies.Earth;
+import bodies.Satellite;
 
 public class Main {
 

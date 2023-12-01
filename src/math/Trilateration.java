@@ -1,6 +1,6 @@
 package math;
 
-import Bodies.Satellite;
+import bodies.Satellite;
 
 public class Trilateration {
 	// Lightspeed constant measured in meters per second.
