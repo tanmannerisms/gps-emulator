@@ -2,6 +2,8 @@ package math;
 
 import bodies.Satellite;
 
+import java.util.Arrays;
+
 public class Trilateration {
 	// Lightspeed constant measured in meters per second.
 	private static final int LIGHTSPEED = 299792458;
@@ -47,6 +49,33 @@ public class Trilateration {
 		L =  Math.pow(d3, 2) - Math.pow(d4, 2) - Math.pow(x3, 2) + Math.pow(x4, 2) - Math.pow(y3, 2) + Math.pow(y4, 2) - Math.pow(z3, 2) + Math.pow(z4, 2);
 
 		double[][] matrix = {{A, B, C, D}, {E, F, G, H}, {I, J, K, L}};
+		int maxIndex = 0;
+
+		for (int col = 0; col < matrix[0].length - 1; col++) {
+			System.out.println(Arrays.deepToString(matrix));
+			for (int row = col + 1; row < matrix.length; row++) {
+				if (Math.abs(matrix[row][col]) > Math.abs(matrix[maxIndex][col])) {
+					maxIndex = row;
+				}
+			}
+
+			if (matrix[maxIndex][col] == 0) continue;
+
+			double[] tempRow = matrix[maxIndex];
+			matrix[maxIndex] = matrix[col];
+			matrix[col] = tempRow;
+
+			for (int row = 0; row < matrix.length; row++) {
+				if (row == col || matrix[row][col] == 0) continue;
+				double multiplier = matrix[row][col] / matrix[col][col];
+				for (int i = col; i < matrix[0].length; i++) {
+					matrix[row][i] -= multiplier * matrix[col][i];
+				}
+			}
+		}
+
+
+
 
 //		double circleA = getCircumference(d1);
 //		double circleB = getCircumference(d2);
